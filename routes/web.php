@@ -1,43 +1,27 @@
-<!-- <?php
-
-        use App\Http\Controllers\ProfileController;
-        use Illuminate\Support\Facades\Route;
-
-        Route::get('/', function () {
-            return view('welcome');
-        });
-
-        Route::get('/dashboard', function () {
-            return view('dashboard');
-        })->middleware(['auth', 'verified'])->name('dashboard');
-
-        Route::middleware('auth')->group(function () {
-            Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-            Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-            Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-        });
-
-        require __DIR__ . '/auth.php';
-        ?> -->
-
-
 <?php
 
-//use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Demo cho báo cáo
-Route::get('/login', function () {
-    return view('auth.login');
+// ==================== DEMO CHO BÁO CÁO ====================
+Route::get('/login-test', function () {
+    return '<h1 style="text-align:center; margin-top:100px; color:green;">
+            ✅ Trang Login Demo - Bảo mật Web Nhóm 9
+            </h1>';
 });
 
-Route::get('/register', function () {
-    return view('auth.register');
+Route::get('/register-test', function () {
+    return '<h1 style="text-align:center; margin-top:100px; color:blue;">
+            ✅ Trang Register Demo - Bảo mật Web Nhóm 9
+            </h1>';
 });
 
 Route::get('/dashboard', function () {
-    return "Đây là trang Dashboard - Demo Bảo mật Web";
+    return '<h1 style="text-align:center; margin-top:100px; color:purple;">
+            Dashboard - Hệ thống đã được Hardening
+            </h1>';
 });
+// ========================================================
