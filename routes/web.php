@@ -6,22 +6,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// ==================== DEMO CHO BÁO CÁO ====================
-Route::get('/login-test', function () {
-    return '<h1 style="text-align:center; margin-top:100px; color:green;">
-            ✅ Trang Login Demo - Bảo mật Web Nhóm 9
-            </h1>';
+// Demo cho báo cáo
+Route::get('/login-demo', function () {
+    return view('auth.login');        // dùng giao diện Breeze có sẵn
 });
 
-Route::get('/register-test', function () {
-    return '<h1 style="text-align:center; margin-top:100px; color:blue;">
-            ✅ Trang Register Demo - Bảo mật Web Nhóm 9
-            </h1>';
+Route::get('/register-demo', function () {
+    return view('auth.register');
 });
 
-Route::get('/dashboard', function () {
-    return '<h1 style="text-align:center; margin-top:100px; color:purple;">
-            Dashboard - Hệ thống đã được Hardening
+Route::get('/dashboard-demo', function () {
+    return '<h1 style="text-align: center; margin-top: 100px; color: green; font-size: 32px;">
+            🎉 Dashboard - Hệ thống đã được triển khai thành công trên Azure<br>
+            <small>Bảo mật Web - Nhóm 9</small>
             </h1>';
 });
-// ========================================================
